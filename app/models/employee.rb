@@ -24,9 +24,9 @@ class Employee < ApplicationRecord
                     division: row["Division"] || row["department"],
                     country: row["Country"] || row["country"],
                     gender: row["Gender"] || row["gender"],
-                    base_pay: row["Base Pay"] || row["salary"],
-                    bonus: row["Bonus"] || row["bonus"],
-                    equity: row["Equity (Shares)"] || row["shares"],
+                    base_pay: row["Base Pay"] || row["salary"] || 0,
+                    bonus: row["Bonus"] || row["bonus"] || 0,
+                    equity: row["Equity (Shares)"] || row["shares"] || 0,
                     restaurant_id: idx + 1
                 )
             end
