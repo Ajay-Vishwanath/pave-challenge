@@ -24,7 +24,7 @@ I chose Rails to complete this challenge because it's built-in, out-out-the-box 
 
 The architecture of this web-app was pretty straightforward: I knew I wanted a `restaurants` table keeping track of the name, and then an `employees` table keeping track of all the information from the CSV files. For the purposes of our endpoints, I knew that these tables had to be relational, with `restaurants` having many `employees`, so I kept track of a `restaurant_id` in the employees table and made the ActiveRecord association accordingly. 
 
-In my `seeds.rb` file, I created the 4 restaurants that we are ingesting data from giving them their appropriate names. I then call an Employee model method to ingest from the CSVs which I placed in my library folder. That Employee method is here: 
+In my `seeds.rb` file, I created the 4 `restaurant` objects that we are ingesting data from giving them their appropriate names. I then call an `Employee` model method to ingest from the CSVs which I placed in my library folder. That `Employee` method is here: 
 
 ```Ruby
 def self.import_from_csv
